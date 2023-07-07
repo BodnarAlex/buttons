@@ -14,10 +14,10 @@ $(window).on('load', function() {
 
     $('.button').click(function(){
         const list = this.classList;
-        console.log(this);
        switch (list[1]){
         case 'change_color':
-            console.log(1);
+            var index = getRandomInt(0, colors.length);
+            ChangeColor(colors[index]);
             break;
         case 'change_buttons':
             console.log(2);
@@ -52,4 +52,11 @@ $(window).on('load', function() {
             $("main").css("border-color", color);
         }
     }
+
+    //Максимум не включается, минимум включается
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min; 
+      }
 });
