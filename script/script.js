@@ -6,10 +6,8 @@ $(window).on('load', function() {
     //слушатель на кнопки цветов
     $('.colour_item').click(function(){
         const list = this.classList;
-        if(list.length==2){
-            var color = list[1];
-            ChangeColor(color)
-        }
+        if(list.length==2)
+            ChangeColor(list[1]);
     });  
 
     $('.button').click(function(){
