@@ -12,7 +12,7 @@
     <header>
         <nav class="colour">
             <ul>
-                <li><div class="colour_item black"></div></li>
+                <li><div class="colour_item gray"></div></li>
                 <li><div class="colour_item white"></div></li>
                 <li><div class="colour_item green"></div></li>
                 <li><div class="colour_item blue"></div></li>
@@ -70,17 +70,26 @@
 </html>
 
 <script>
+    //массив цветов
+    const colors = ['gray', 'white', 'green', 'blue', 'red', 'violet', 'yellow'];
 
-//изменение цвета
-$('.colour_item').click(function(){
-    const list = this.classList;
-    var color;
-    if(list.length==2){
-        color = list[1];
-        $('.active').removeClass('active');
-        $('.'+color).addClass('active');
-        $("html").css("background", color);
-        $("main").css("border-color", color);
+    //слушатель на кнопки цветов
+    $('.colour_item').click(function(){
+        const list = this.classList;
+        var color;
+        if(list.length==2){
+            color = list[1];
+            ChangeColor(color)
+        }
+    });  
+
+    //функция изменения цвета
+    function ChangeColor(color){
+        if(color){
+            $('.active').removeClass('active');
+            $('.'+color).addClass('active');
+            $("html").css("background", color);
+            $("main").css("border-color", color);
+        }
     }
-});  
-</script>
+    </script>
