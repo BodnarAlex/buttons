@@ -3,6 +3,7 @@
  <head>
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="/script/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buttons</title>
@@ -67,3 +68,19 @@
     </footer>
  </body>
 </html>
+
+<script>
+
+//изменение цвета
+$('.colour_item').click(function(){
+    const list = this.classList;
+    var color;
+    if(list.length==2){
+        color = list[1];
+        $('.active').removeClass('active');
+        $('.'+color).addClass('active');
+        $("html").css("background", color);
+        $("main").css("border-color", color);
+    }
+});  
+</script>
