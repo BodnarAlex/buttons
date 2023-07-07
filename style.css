@@ -1,6 +1,14 @@
 *{
     border: 1px solid black;
 }
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 /* HEADER */
 ul{
     display: flex;
