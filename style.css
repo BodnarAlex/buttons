@@ -1,6 +1,3 @@
-*{
-    border: 1px solid black;
-}
 body{
     display: flex;
     flex-flow: column nowrap;
@@ -8,8 +5,13 @@ body{
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 /* HEADER */
+header{
+    flex:1;
+}
 ul{
     display: flex;
     flex-flow: row nowrap;
@@ -52,9 +54,50 @@ ul li div{
     background-color: yellow;
 }
 
+html{
+    background-color: yellow;
+}
+main{
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid yellow;
+}
+body{
+    background-color: white;
+    border: 1px solid black;
+}
+
 /* MAIN */
 
+main{
+    flex:10;
+}
+.content{
+ display: flex;
+ flex-flow: row wrap;
+ justify-content: space-around;
+}
+.content .content_item:first-child{
+    flex-basis: 354px;
+}
+.content_item:nth-child(2n+1){
+    flex-basis: 154px;
+    align-self: flex-end;
+}
+.content_item:nth-child(2n){
+    flex-basis: 354px;
+    align-self: flex-start;
+}
+
+.content_item{
+    width: min-content;
+    margin: 60px;
+    padding: 20px;
+}
+
 /* FOOTER */
+footer{
+    flex:1;
+}
 .image_github{
     width: 50px;
     height: 50px;
