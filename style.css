@@ -92,7 +92,7 @@ main{
     align-self: flex-end;
 }
 .content_item:nth-child(2n){
-    flex-basis: 354px;
+    flex-basis: 254px;
     align-self: flex-start;
 }
 
@@ -101,7 +101,10 @@ main{
     margin: 60px;
     padding: 20px;
 }
-
+button{
+    width: 150px;
+    padding: 20px;
+}
 /* FOOTER */
 footer{
     flex:1;
