@@ -1,0 +1,44 @@
+*{
+    border: 1px solid black;
+}
+ul{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 10px 15px;
+    padding: 0;
+    justify-content: end;
+}
+ul li{
+    list-style-type: none;
+}
+ul li div{
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.colour_item{
+    border-color: black;
+}
+.black{
+    background-color: black;
+}
+.white{
+    background-color: white;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.violet{
+    background-color: violet;
+}
+.yellow{
+    background-color: yellow;
+}
