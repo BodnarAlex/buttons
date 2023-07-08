@@ -3,6 +3,7 @@ $(window).on('load', function() {
  //массив цветов
     const colors = ['gray', 'white', 'green', 'blue', 'red', 'violet', 'yellow'];
     const audio = new Audio('source/muzyka.mp3');
+    const boom = new Audio('source/vzryiv.mp3');
     //слушатель на кнопки цветов
     $('.colour_item').click(function(){
         const list = this.classList;
@@ -43,10 +44,11 @@ $(window).on('load', function() {
             console.log(7);
             break;
         case 'boom_everything':
+            audio.pause();
+            boom.play();
             alert("Вы проиграли");
             $('body').remove();
             $("html").addClass('boom');
-            console.log(8);
             break;
        }
     });
