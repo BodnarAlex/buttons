@@ -1,9 +1,10 @@
 $(window).on('load', function() {
 
- //массив цветов
+    //массив цветов
     const colors = ['gray', 'white', 'green', 'blue', 'red', 'violet', 'yellow'];
     const audio = new Audio('source/muzyka.mp3');
     const boom = new Audio('source/vzryiv.mp3');
+
     //слушатель на кнопки цветов
     $('.colour_item').click(function(){
         const list = this.classList;
@@ -25,11 +26,13 @@ $(window).on('load', function() {
             console.log(3);
             break;
         case 'on_music':
-            toggleClassAndHTML("on_music", "off_music", "Пауза");
+            $('.on_music').html("Пауза");
+            toggleClassAndHTML("on_music", "off_music");
             audio.play();
             break;
         case 'off_music':
-            toggleClassAndHTML("off_music", "on_music", "Продолжить");
+            $('.off_music').html("Продолжить");
+            toggleClassAndHTML("off_music", "on_music");
             audio.pause();
             break;    
         case 'delete_button':
@@ -70,8 +73,7 @@ $(window).on('load', function() {
         return Math.floor(Math.random() * (max - min)) + min; 
       }
 
-      function toggleClassAndHTML(beforeClass, futureClass, html) {
-        $('.'+beforeClass).html(html);
+      function toggleClassAndHTML(beforeClass, futureClass) {
         $('.'+beforeClass).addClass(futureClass);
         $('.'+beforeClass).removeClass(beforeClass);
       }

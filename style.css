@@ -101,6 +101,10 @@ main{
     margin: 60px;
     padding: 20px;
 }
+.content_item_improve{
+    width: 250px;
+    margin: 50px;
+}
 button{
     width: 150px;
     padding: 20px;
