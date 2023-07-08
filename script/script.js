@@ -36,6 +36,9 @@ $(window).on('load', function() {
             console.log(7);
             break;
         case 'boom_everything':
+            alert("Вы проиграли");
+            $('body').remove();
+            $("html").addClass('boom');
             console.log(8);
             break;
        }

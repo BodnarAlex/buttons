@@ -105,6 +105,13 @@ button{
     width: 150px;
     padding: 20px;
 }
+.boom{
+    height: -webkit-fill-available;
+    background-image: url(img/boom.avif);
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* FOOTER */
 footer{
     flex:1;
