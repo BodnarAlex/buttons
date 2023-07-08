@@ -24,15 +24,11 @@ $(window).on('load', function() {
             console.log(3);
             break;
         case 'on_music':
-            $(".on_music").addClass("off_music");
-            $(".on_music").removeClass("on_music");
-            $(".off_music").html("Пауза");
+            toggleClassAndHTML("on_music", "off_music", "Пауза");
             audio.play();
             break;
         case 'off_music':
-            $(".off_music").addClass("on_music");
-            $(".off_music").removeClass("off_music");
-            $(".on_music").html("Продолжить");
+            toggleClassAndHTML("off_music", "on_music", "Продолжить");
             audio.pause();
             break;    
         case 'delete_button':
@@ -70,5 +66,11 @@ $(window).on('load', function() {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min)) + min; 
+      }
+
+      function toggleClassAndHTML(beforeClass, futureClass, html) {
+        $('.'+beforeClass).html(html);
+        $('.'+beforeClass).addClass(futureClass);
+        $('.'+beforeClass).removeClass(beforeClass);
       }
 });
