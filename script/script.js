@@ -44,7 +44,8 @@ $(window).on('load', function() {
             });
             break;
         case 'strong_button':
-            console.log(7);
+            $(".content_item").addClass('content_item_improve');
+            $(".content_item").removeClass('content_item');
             break;
         case 'boom_everything':
             audio.pause();
