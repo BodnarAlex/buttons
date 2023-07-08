@@ -44,9 +44,15 @@ $(window).on('load', function() {
             });
             break;
         case 'strong_button':
-            $(".content_item").addClass('content_item_improve');
-            $(".content_item").removeClass('content_item');
+            $('.strong_button').html("Вразнобой");
+            toggleClassAndHTML("strong_button", "not_strong_button");
+            toggleClassAndHTML("content_item", "content_item_improve");
             break;
+        case 'not_strong_button':
+            $('.not_strong_button').html("Упорядочить");
+            toggleClassAndHTML("not_strong_button", "strong_button");
+            toggleClassAndHTML("content_item_improve", "content_item");
+            break;   
         case 'boom_everything':
             audio.pause();
             boom.play();
