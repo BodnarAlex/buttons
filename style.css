@@ -112,6 +112,13 @@ button{
     background-repeat: no-repeat;
     background-size: cover;
 }
+#fly{
+    font-size: 100px;
+    transform: rotate(-30deg);
+    position: fixed;
+    bottom: -350px;
+    left: -750px;
+}
 /* FOOTER */
 footer{
     flex:1;
