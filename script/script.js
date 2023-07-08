@@ -4,6 +4,7 @@ $(window).on('load', function() {
     const colors = ['gray', 'white', 'green', 'blue', 'red', 'violet', 'yellow'];
     const audio = new Audio('source/muzyka.mp3');
     const boom = new Audio('source/vzryiv.mp3');
+    var buttons = 8;
 
     //слушатель на кнопки цветов
     $('.colour_item').click(function(){
@@ -36,7 +37,9 @@ $(window).on('load', function() {
             audio.pause();
             break;    
         case 'delete_button':
-            console.log(5);
+            var del = getRandomInt(0, buttons);
+            $('.content_item:nth-child(3)').remove();
+            buttons--;
             break;
         case 'fly_header':
             $("#fly").animate({bottom: "1400px", left: "1700px"}, 2300, function(){
