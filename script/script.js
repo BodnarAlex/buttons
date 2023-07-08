@@ -30,7 +30,7 @@ $(window).on('load', function() {
             console.log(5);
             break;
         case 'fly_header':
-            console.log(6);
+            $("#fly").animate({bottom: "1400px", left: "1700px", 2300});
             break;
         case 'strong_button':
             console.log(7);

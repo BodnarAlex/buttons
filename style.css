@@ -118,6 +118,7 @@ button{
     position: fixed;
     bottom: -350px;
     left: -750px;
+    min-width: 950px;
 }
 /* FOOTER */
 footer{
