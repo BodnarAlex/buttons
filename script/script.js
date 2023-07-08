@@ -2,7 +2,7 @@ $(window).on('load', function() {
 
  //массив цветов
     const colors = ['gray', 'white', 'green', 'blue', 'red', 'violet', 'yellow'];
-
+    const audio = new Audio('source/muzyka.mp3');
     //слушатель на кнопки цветов
     $('.colour_item').click(function(){
         const list = this.classList;
@@ -24,8 +24,17 @@ $(window).on('load', function() {
             console.log(3);
             break;
         case 'on_music':
-            console.log(4);
+            $(".on_music").addClass("off_music");
+            $(".on_music").removeClass("on_music");
+            $(".off_music").html("Пауза");
+            audio.play();
             break;
+        case 'off_music':
+            $(".off_music").addClass("on_music");
+            $(".off_music").removeClass("off_music");
+            $(".on_music").html("Продолжить");
+            audio.pause();
+            break;    
         case 'delete_button':
             console.log(5);
             break;
