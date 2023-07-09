@@ -116,6 +116,13 @@ button{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.win{
+    height: -webkit-fill-available;
+    background-image: url(img/win.jpg);
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #fly{
     font-size: 100px;
     transform: rotate(-30deg);

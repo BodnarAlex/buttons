@@ -5,8 +5,8 @@ $(window).on('load', function() {
     var new_colors = [];
     const audio = new Audio('source/muzyka.mp3');
     const boom = new Audio('source/vzryiv.mp3');
-    //const good = new Audio('source/good.mp3');
-    var buttons = 8;
+    const win = new Audio('source/good.mp3');
+    var buttons = 6;
     var checkOne = [];
 
     //слушатель на кнопки цветов
@@ -65,11 +65,14 @@ $(window).on('load', function() {
             console.log(del);
             checkOne =  $('.button');
             console.log(checkOne.length);
-            if(checkOne.length == 2){
+            if(checkOne.length == 3){
+                console.log(checkOne);
+                console.log(checkOne.length);
                 alert("Победа!");
-                good.play();
+                win.play();
                 $('body').remove();
-            $   ("html").addClass('boom');
+                $('html').css("background-color", "none");
+            $   ("html").addClass('win');
             }else{
                 $('.content_item:nth-child('+del+')').remove();
             buttons--;
@@ -95,6 +98,7 @@ $(window).on('load', function() {
             boom.play();
             alert("Вы проиграли");
             $('body').remove();
+            $('html').css("background-color", "none");
             $("html").addClass('boom');
             break;
        }
@@ -105,7 +109,7 @@ $(window).on('load', function() {
         if(color){
             $('.active').removeClass('active');
             $('.'+color).addClass('active');
-            $("html").css("background", color);
+            $("html").css("background-color", color);
             $("main").css("border-color", color);
         }
     }
