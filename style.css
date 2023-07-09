@@ -120,9 +120,9 @@ button{
     font-size: 100px;
     transform: rotate(-30deg);
     position: fixed;
-    bottom: -350px;
-    left: -750px;
-    min-width: 950px;
+    bottom: -500px;
+    left: -1500px;
+    min-width: 1850px;
 }
 /* FOOTER */
 footer{

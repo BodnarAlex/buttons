@@ -23,38 +23,30 @@ $(window).on('load', function() {
             var index = getRandomInt(0, colors.length);
             ChangeColor(colors[index]);
             break;
-        case 'change_buttons':
-            console.log(2);
-            break;
-        case 'change_nav':
+        // case 'change_buttons':
+        //     console.log(2);
+        //     break;
+        // case 'change_nav':
 
 
-            var new_colors = colors;
-            shuffle(new_colors);
+        //     var new_colors = colors;
+        //     shuffle(new_colors);
 
-            console.log(('new_colors'));
-            console.log((new_colors));
+        //     console.log(('new_colors'));
+        //     console.log((new_colors));
 
-            for(var i =0; i<4; i++){
-                console.log(i);
-                var colorItem =  $('.colour_item')[i].classList;
-                var k = i-1;
-                console.log("colour_item:nth-chil");
-                console.log( $('.colour_item:nth-child(5)'));
-                console.log("colorItem[1]");
-                console.log(colorItem[1]);
-                console.log("new_colors[i]");
-                console.log(new_colors[i]);
-
-    
-                $('.colour_item:nth-child(5)').addClass(new_colors[i]);
-                $('.colour_item:nth-child(5)').removeClass(colorItem[1]);
-                //$('.'+colorItem[1]).removeClass(colorItem[1]);
-               // toggleClassAndHTML(colorItem[1], new_colors[i]);
-                //$('.colour_item:nth-child('+i+')').remove();
-            }
-            console.log(new_colors);
-            break;
+        //     for(var i =0; i<4; i++){
+        //         console.log(i);
+        //         var colorItem =  $('.colour_item')[i].classList;
+        //         var k = i-1;    
+        //         $('.colour_item:nth-child(5)').addClass(new_colors[i]);
+        //         $('.colour_item:nth-child(5)').removeClass(colorItem[1]);
+        //         //$('.'+colorItem[1]).removeClass(colorItem[1]);
+        //        // toggleClassAndHTML(colorItem[1], new_colors[i]);
+        //         //$('.colour_item:nth-child('+i+')').remove();
+        //     }
+        //     console.log(new_colors);
+        //     break;
 
 
             
@@ -84,8 +76,8 @@ $(window).on('load', function() {
             }
             break;
         case 'fly_header':
-            $("#fly").animate({bottom: "1400px", left: "1700px"}, 2300, function(){
-                $("#fly").css({bottom: "-350px", left: "-700px"});
+            $("#fly").animate({bottom: "1400px", left: "1700px"}, 4300, function(){
+                $("#fly").css({bottom: "-500px", left: "-1500px"});
             });
             break;
         case 'strong_button':
