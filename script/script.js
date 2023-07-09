@@ -2,9 +2,12 @@ $(window).on('load', function() {
 
     //массив цветов
     const colors = ['gray', 'white', 'green', 'blue', 'red', 'violet', 'yellow'];
+    var new_colors = [];
     const audio = new Audio('source/muzyka.mp3');
     const boom = new Audio('source/vzryiv.mp3');
+    //const good = new Audio('source/good.mp3');
     var buttons = 8;
+    var checkOne = [];
 
     //слушатель на кнопки цветов
     $('.colour_item').click(function(){
@@ -24,8 +27,37 @@ $(window).on('load', function() {
             console.log(2);
             break;
         case 'change_nav':
-            console.log(3);
+
+
+            var new_colors = colors;
+            shuffle(new_colors);
+
+            console.log(('new_colors'));
+            console.log((new_colors));
+
+            for(var i =0; i<4; i++){
+                console.log(i);
+                var colorItem =  $('.colour_item')[i].classList;
+                var k = i-1;
+                console.log("colour_item:nth-chil");
+                console.log( $('.colour_item:nth-child(5)'));
+                console.log("colorItem[1]");
+                console.log(colorItem[1]);
+                console.log("new_colors[i]");
+                console.log(new_colors[i]);
+
+    
+                $('.colour_item:nth-child(5)').addClass(new_colors[i]);
+                $('.colour_item:nth-child(5)').removeClass(colorItem[1]);
+                //$('.'+colorItem[1]).removeClass(colorItem[1]);
+               // toggleClassAndHTML(colorItem[1], new_colors[i]);
+                //$('.colour_item:nth-child('+i+')').remove();
+            }
+            console.log(new_colors);
             break;
+
+
+            
         case 'on_music':
             $('.on_music').html("Пауза");
             toggleClassAndHTML("on_music", "off_music");
@@ -37,9 +69,19 @@ $(window).on('load', function() {
             audio.pause();
             break;    
         case 'delete_button':
-            var del = getRandomInt(0, buttons);
-            $('.content_item:nth-child(3)').remove();
+            var del = getRandomInt(1, buttons);
+            console.log(del);
+            checkOne =  $('.button');
+            console.log(checkOne.length);
+            if(checkOne.length == 2){
+                alert("Победа!");
+                good.play();
+                $('body').remove();
+            $   ("html").addClass('boom');
+            }else{
+                $('.content_item:nth-child('+del+')').remove();
             buttons--;
+            }
             break;
         case 'fly_header':
             $("#fly").animate({bottom: "1400px", left: "1700px"}, 2300, function(){
@@ -86,5 +128,9 @@ $(window).on('load', function() {
       function toggleClassAndHTML(beforeClass, futureClass) {
         $('.'+beforeClass).addClass(futureClass);
         $('.'+beforeClass).removeClass(beforeClass);
+      }
+
+      function shuffle(array) {
+        array.sort(() => Math.random() - 0.5);
       }
 });
