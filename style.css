@@ -86,14 +86,17 @@ main{
 }
 .content .content_item:first-child{
     flex-basis: 354px;
+    padding-top: 50px;
 }
 .content_item:nth-child(2n+1){
     flex-basis: 154px;
     align-self: flex-end;
+    padding-top: 0px;
 }
 .content_item:nth-child(2n){
     flex-basis: 254px;
     align-self: flex-start;
+    padding-top: 70px;
 }
 
 .content_item{
@@ -104,6 +107,7 @@ main{
 .content_item_improve{
     width: 250px;
     margin: 50px;
+    padding-top: 0;
 }
 button{
     width: 150px;
@@ -131,6 +135,39 @@ button{
     left: -1500px;
     min-width: 1850px;
 }
+.button{
+    width: 150px;
+    height: 150px;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    background-color: none;
+}
+.button.change_color{
+    background-image: url(img/colours.jpg);
+    margin-top: 50px;
+}
+.button.on_music{
+    background-image: url(img/music.svg);
+    margin-top: 00px;
+}
+.button.fly_header{
+    background-image: url(img/paragraph.svg);
+}
+.button.delete_button{
+    background-image: url(img/winning.png);
+}
+.button.strong_button{
+    background-image: url(img/table.png);
+}
+.button.boom_everything{
+    background-image: url(img/bomb.png);
+}
+.button.reset{
+    background-image: url(img/reset.png);
+}
+
 /* FOOTER */
 footer{
     flex:1;
